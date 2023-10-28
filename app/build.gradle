@@ -6,6 +6,10 @@ plugins {
 android {
     namespace 'com.example.simpletextsaver'
     compileSdk 33
+    buildFeatures{
+        viewBinding true
+    }
+
 
     defaultConfig {
         applicationId "com.example.simpletextsaver"
