@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:backgroundTint="#0C0C0C"
-    tools:context=".MainActivity">
+    tools:context=".Register">
 
     <View
         android:id="@+id/view2"
@@ -48,8 +48,8 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:fontFamily="@font/primary_bold"
-        android:text="Dunijet Group"
-        android:textColor="#ECE8E8"
+        android:text="SimpleTextSaver"
+        android:textColor="@color/black"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/toolbarMain"
@@ -157,6 +157,14 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout3" />
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_gravity="bottom"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:menu="@menu/menu_bottom_navigation"/>
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
