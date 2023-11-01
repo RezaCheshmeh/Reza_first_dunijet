@@ -1,5 +1,6 @@
 package com.example.simpletextsaver
 
+import android.animation.AnimatorSet
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.animation.AlphaAnimation
@@ -10,14 +11,16 @@ import android.view.animation.ScaleAnimation
 import com.example.simpletextsaver.databinding.ActivityMainBinding
 import com.example.simpletextsaver.databinding.ActivitySplashBinding
 
-class splash : AppCompatActivity() {
+class Splash : AppCompatActivity() {
     lateinit var binding :ActivitySplashBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivitySplashBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        binding.txtSpalsh.startAnimation(alphaAnimation())
-        merge_scale_rotate()
+//        binding.txtSpalsh.startAnimation(alphaAnimation())
+//        merge_scale_rotate()
+        binding.txtSpalsh.startAnimation(merge_scale_rotate())
+        binding.imgSplash.startAnimation(merge_scale_rotate())
     }
 
     private fun alphaAnimation():AlphaAnimation{//transparency
@@ -44,13 +47,13 @@ class splash : AppCompatActivity() {
 //        anim.fillAfter = true
         return anim
     }
-    private fun merge_scale_rotate(){
+    private fun merge_scale_rotate():AnimationSet{
         val animSet = AnimationSet(true)
         animSet.addAnimation(rotateAnimation())
         animSet.addAnimation(scaleAnimation())
         animSet.duration = 800
         animSet.fillAfter = true
-        binding.imgSplash.startAnimation(animSet)
+        return animSet
     }
 
 

@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:backgroundTint="#0C0C0C"
-    tools:context=".splash">
+    tools:context=".Splash">
 
     <View
         android:id="@+id/view"
@@ -32,17 +31,19 @@
         app:srcCompat="@drawable/dunijet_img" />
 
     <TextView
-        android:paddingStart="8dp"
-        android:paddingEnd="8dp"
         android:id="@+id/txt_spalsh"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="16dp"
         android:background="#0B0A0A"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
         android:text="Dunijet Group"
+        android:fontFamily="@font/primary_bold"
         android:textColor="#F3ECEC"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/img_splash" />
 </androidx.constraintlayout.widget.ConstraintLayout>
